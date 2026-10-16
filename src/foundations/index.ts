@@ -2,6 +2,7 @@ import type { FoundationPage } from "./types";
 import { TypographyPage } from "./pages/typography";
 import { PrimitivesPage } from "./pages/primitives";
 import { TokensPage } from "./pages/tokens";
+import { TokensRadiusPage } from "./pages/tokens-radius";
 import { SpacingPage } from "./pages/spacing";
 import { MockupsPage } from "./pages/mockups";
 import { ImageRatiosPage } from "./pages/image-ratios";
@@ -24,6 +25,12 @@ export const foundations: FoundationPage[] = [
     name: "Tokens",
     description: "Couche sémantique : tokens Figma (Cobalt) et tokens du code.",
     render: TokensPage,
+  },
+  {
+    slug: "fondamentaux-tokens-radius",
+    name: "Tokens Radius",
+    description: "Échelle de rayons de bordure sémantique (Figma).",
+    render: TokensRadiusPage,
   },
   {
     slug: "fondamentaux-espacements",
