@@ -3,6 +3,7 @@ import { TypographyPage } from "./pages/typography";
 import { PrimitivesPage } from "./pages/primitives";
 import { TokensPage } from "./pages/tokens";
 import { TokensRadiusPage } from "./pages/tokens-radius";
+import { TokensSpacingPage } from "./pages/tokens-spacing";
 import { SpacingPage } from "./pages/spacing";
 import { MockupsPage } from "./pages/mockups";
 import { ImageRatiosPage } from "./pages/image-ratios";
@@ -31,6 +32,12 @@ export const foundations: FoundationPage[] = [
     name: "Tokens Radius",
     description: "Échelle de rayons de bordure sémantique (Figma).",
     render: TokensRadiusPage,
+  },
+  {
+    slug: "fondamentaux-tokens-spacing",
+    name: "Tokens Spacing",
+    description: "Échelle d'espacement sémantique (Figma).",
+    render: TokensSpacingPage,
   },
   {
     slug: "fondamentaux-espacements",
