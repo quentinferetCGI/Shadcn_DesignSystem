@@ -13,6 +13,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { RotateCcw, Copy, Check } from "lucide-react";
+import { getComponentStack, type ComponentStack } from "./stacks";
+
+const STACK_STYLES: Record<ComponentStack, string> = {
+  Radix: "border-violet-500/30 bg-violet-500/10 text-violet-700 dark:text-violet-400",
+  React: "border-sky-500/30 bg-sky-500/10 text-sky-700 dark:text-sky-400",
+  Base: "border-border bg-muted text-muted-foreground",
+};
 
 function defaultsFor(demo: ComponentDemo): ControlValues {
   const values: ControlValues = {};
@@ -25,6 +32,7 @@ export function Playground({ demo }: { demo: ComponentDemo }) {
   const [copied, setCopied] = useState(false);
   const [bgColor, setBgColor] = useState("");
   const code = useMemo(() => demo.code(values), [demo, values]);
+  const stack = getComponentStack(demo.slug);
 
   function set(key: string, value: string | boolean | number) {
     setValues((v) => ({ ...v, [key]: value }));
@@ -177,9 +185,25 @@ export function Playground({ demo }: { demo: ComponentDemo }) {
 
       <div className="border-border rounded-lg border">
         <div className="border-border flex items-center justify-between border-b px-4 py-2">
-          <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
-            Code
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
+              Code
+            </span>
+            {stack && (
+              <span
+                className={`rounded-full border px-2 py-0.5 text-[11px] font-medium ${STACK_STYLES[stack]}`}
+                title={
+                  stack === "Radix"
+                    ? "Construit sur une primitive Radix UI"
+                    : stack === "React"
+                      ? "Construit sur une librairie React tierce (non Radix)"
+                      : "React/HTML natif, sans librairie headless externe"
+                }
+              >
+                {stack}
+              </span>
+            )}
+          </div>
           <Button variant="ghost" size="sm" onClick={copyCode}>
             {copied ? <Check /> : <Copy />}
             {copied ? "Copié" : "Copier"}
