@@ -2,6 +2,7 @@ import type { FoundationPage } from "./types";
 import { TypographyPage } from "./pages/typography";
 import { PrimitivesColorsPage } from "./pages/primitives-colors";
 import { PrimitivesTypographyPage } from "./pages/primitives-typography";
+import { PrimitivesShadowPage } from "./pages/primitives-shadow";
 import { TokensPage } from "./pages/tokens";
 import { TokensRadiusPage } from "./pages/tokens-radius";
 import { TokensSpacingPage } from "./pages/tokens-spacing";
@@ -27,6 +28,12 @@ export const foundations: FoundationPage[] = [
     name: "Primitives Typographie",
     description: "Familles, styles, graisses, tailles et hauteurs de ligne brutes (Figma).",
     render: PrimitivesTypographyPage,
+  },
+  {
+    slug: "fondamentaux-primitives-shadow",
+    name: "Primitives Shadow",
+    description: "Couleur d'ombre brute et ses paliers d'opacité (Figma).",
+    render: PrimitivesShadowPage,
   },
   {
     slug: "fondamentaux-tokens-color",
