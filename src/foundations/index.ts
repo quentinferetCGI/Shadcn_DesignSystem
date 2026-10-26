@@ -1,6 +1,7 @@
 import type { FoundationPage } from "./types";
 import { TypographyPage } from "./pages/typography";
-import { PrimitivesPage } from "./pages/primitives";
+import { PrimitivesColorsPage } from "./pages/primitives-colors";
+import { PrimitivesTypographyPage } from "./pages/primitives-typography";
 import { TokensPage } from "./pages/tokens";
 import { TokensRadiusPage } from "./pages/tokens-radius";
 import { TokensSpacingPage } from "./pages/tokens-spacing";
@@ -16,10 +17,16 @@ export const foundations: FoundationPage[] = [
     render: TypographyPage,
   },
   {
-    slug: "fondamentaux-primitives",
-    name: "Primitives",
+    slug: "fondamentaux-primitives-couleurs",
+    name: "Primitives Couleurs",
     description: "Nuancier de marque brut (Figma NewSNCF).",
-    render: PrimitivesPage,
+    render: PrimitivesColorsPage,
+  },
+  {
+    slug: "fondamentaux-primitives-typographie",
+    name: "Primitives Typographie",
+    description: "Familles, styles, graisses, tailles et hauteurs de ligne brutes (Figma).",
+    render: PrimitivesTypographyPage,
   },
   {
     slug: "fondamentaux-tokens",

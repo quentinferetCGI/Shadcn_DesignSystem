@@ -22,12 +22,12 @@ function PrimitiveFamilyRow({ family }: { family: PrimitiveColorFamily }) {
   );
 }
 
-function PrimitivesPage() {
+function PrimitivesColorsPage() {
   return (
     <div className="flex flex-col gap-10">
       <PageHeader
-        title="Primitives"
-        description="Nuancier de marque brut : les valeurs de couleur elles-mêmes, avant toute signification d'usage. C'est la matière première dans laquelle les Tokens puisent — voir la page Tokens pour la couche sémantique (Surface, Text, Stroke, Icon)."
+        title="Primitives Couleurs"
+        description="Nuancier de marque brut : les valeurs de couleur elles-mêmes, avant toute signification d'usage. C'est la matière première dans laquelle les Tokens puisent — voir la page Tokens pour la couche sémantique (Surface, Text, Stroke, Icon), et Primitives Typographie pour l'équivalent côté police."
       />
 
       <Section
@@ -55,4 +55,4 @@ function PrimitivesPage() {
   );
 }
 
-export { PrimitivesPage };
+export { PrimitivesColorsPage };
