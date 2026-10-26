@@ -150,7 +150,7 @@ function TokensPage() {
   return (
     <div className="flex flex-col gap-10">
       <PageHeader
-        title="Tokens"
+        title="Tokens Color"
         description="Couche sémantique : chaque token porte un nom d'usage (Surface, Text, Stroke, Icon…) et pointe vers une Primitive. Deux sources cohabitent ici : les tokens cibles définis dans Figma, et les tokens réellement câblés dans le code aujourd'hui."
       />
 

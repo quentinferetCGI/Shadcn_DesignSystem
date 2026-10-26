@@ -29,8 +29,8 @@ export const foundations: FoundationPage[] = [
     render: PrimitivesTypographyPage,
   },
   {
-    slug: "fondamentaux-tokens",
-    name: "Tokens",
+    slug: "fondamentaux-tokens-color",
+    name: "Tokens Color",
     description: "Couche sémantique : tokens Figma (Cobalt) et tokens du code.",
     render: TokensPage,
   },
